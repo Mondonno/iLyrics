@@ -1,0 +1,8 @@
+# <--- .gitignore --->
+# If you download the project with this file you can safely delete this
+# Note it is a GITHUB PROJECT gitignore
+.DS_Store
+
+# Stores VSCode versions used for testing VSCode extensions
+.vscode-test
+.vscode
