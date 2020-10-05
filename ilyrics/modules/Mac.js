@@ -6,10 +6,11 @@ This method getting actually playing song from:
 - Spotify
 - QuickTime Player
 */
+
 const applescript = require("applescript")
 const config = require("./pinfo.json");
 const fileMetadata = require('file-metadata');
-var dir = "applescript_f"
+var dir = "scripts/applescript_f"
 
 async function ExecuteAPS(path){
   const rtn_ = await new Promise(resolve => {

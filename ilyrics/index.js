@@ -17,15 +17,14 @@
 
 // <- LIBS ->
 // Here is the required libraries for this node.js app
-const puppeteer = require("puppeteer")
 const request = require("request")
 const cheerio = require("./node_modules/cheerio")
-var fs = require("fs");
+const fs = require("fs");
 const mac = require("./modules/Mac.js") 
 const win = require("./modules/Windows.js") //Working on it to be on use!
 
 // <- VARS ->
-let configFile = require("./modules/pinfo.json"); //Config file declaration
+var configFile = require("./modules/pinfo.json"); //Config file declaration
 var actual_song; //Here is landing the actually song playing
 
 /*
@@ -105,21 +104,11 @@ console.log("⎜ iLyrics - The best lirycs for every audio file!")
 console.log("⎜ Author - github.com/Mondonno")
 console.log("⎣⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯>\n")
 
-if(LastPlayed.Author && LastPlayed.Name){ //Module disabled
-  if(false){
-console.log("Last played song (and getted lirycs)\n"+
-`Song Name: ${LastPlayed.Name}\nAuthor: ${LastPlayed.Author} `)
- 
-console.log("\n\n")
-  }
-}
-
-console.log('mhmhm  '+await customizer('x','x'))
-return
-if(der_check() == "NO_WIFI") return console.log("ERROR: No internet (required to get lyrics)")
-if(der_check() == "SYSTEM_NOT_AVAIBLE") return console.log("ERROR: This system our app do not recoginizing!\nCheck out github.com/Mondonno/iLyrics")
-if(der_check() == "NO_REQUIRED_FILES") return console.log("ERROR: Go and reinstall the app! The required files do not found!")
-if(der_check() == "NO_VERSION") return console.log("Let's go and update app! New version avaible! github.com/Mondonno/iLyrics")
+// return
+// if(der_check() == "NO_WIFI") return console.log("ERROR: No internet (required to get lyrics)")
+// if(der_check() == "SYSTEM_NOT_AVAIBLE") return console.log("ERROR: This system our app do not recoginizing!\nCheck out github.com/Mondonno/iLyrics")
+// if(der_check() == "NO_REQUIRED_FILES") return console.log("ERROR: Go and reinstall the app! The required files do not found!")
+// if(der_check() == "NO_VERSION") return console.log("Let's go and update app! New version avaible! github.com/Mondonno/iLyrics")
 
 setInterval(CheckMusic,checking_interval);
 }
@@ -193,19 +182,24 @@ console.log
 `
 )
 //Calling lyrics api
-console.log(`-> Displaying lirycs for: ${mscSongName}` + "\n")
-const lyrics = GetLyrics(mscAuthor,mscSongName);
+console.log(`-> DISPLAYING LYRICS FOR: ${mscSongName}`, "")
+let song_url = `${await customizer(mscSongName,mscAuthor)}-lyrics`
+const lyrics = await GetLyrics(mscSongName,mscAuthor);
 
 if(lyrics == "ERR"){
-  console.clear()
+  // console.clear()
+  console.log(`-> SONG URL: genius.com/${song_url}\n`)
   console.log("Error occourned! Are you connected to internet?")
 }else if (!lyrics){
-  console.clear()
+ // console.clear()
+ console.log(`-> SONG URL: genius.com/${song_url}\n`)
   console.log("Lyrics for this song are unavaible!")
 }
 else {
-  console.clear()
+ console.clear()
+ console.log("\n<---------------------------------------------------------------------->")
 console.log(lyrics)
+console.log(`\n-> SONG URL: genius.com/${song_url}\n`)
 }
 
   }
@@ -226,52 +220,25 @@ async function customizer(song, artist){
   :param artist: Artist name
 
   In return you are getting the path
-
-  Inspiration from: github.com/SwagLyrics/SwagLyrics-For-Spotify
-  Line: bit.ly/3hEDCIu
-  */
-  /*
+  
   UPDATE!
-  We are working on JavaScript versio of this method but now for fater start we are using ./module.py & child procces for this method
+  We are working on JavaScript version of this method but now for fater start we are using ./module.py & child procces for this method
   */
- console.log('started')
- const { spawn } = require('child_process');
- const PYSpawnOpt = ['./module.py', song, artist];
-  const pyProg = spawn('python', ['./module.py']);
- console.log('started2')
 
-pyProg.st
-    await pyProg.stdout.on('data', async (data) => {
-     console.log(await data);
+ let spawn = require("child_process").spawn
+
+ let pyArgs = ["module.py", '\''+song+ '\'', '\'' + artist + '\'']
+ let pyScript = spawn("python3", ["module.py", '\'' + song+ '\'','\''+artist+ '\'']);
+const pyData = await new Promise(resolve =>{ pyScript.stdout.on('data', function(data) {
+     resolve(data.toString())
  });
-
-console.log(await hmhm)
-
-await console.log('started3')
-
-  return
-  let brc = '([(\[](feat|ft|From "[^"]*")[^)\]]*[)\]]|- .*'
-  let aln = '[^ \-a-zA-Z0-9]+' 
-  let spc = ' *- *| +'
-  let wth = '(?: *\(with )([^)]+)\)'
-  let nlt = '[^\x00-\x7F\x80-\xFF\u0100-\u017F\u0180-\u024F\u1E00-\u1EFF]'
-
-  song = re.sub(brc, '', song).strip()
-  let ft = wth.search(song)
-  if(ft){
-    song = song.replace(ft.group(), '')
-    let ar = ft.group(1)
-    if (ar.indexOf('&'))
-      artist += `-${ar}`
-     else{
-      artist += `-and-{ar}`
-    }
-  }  
-
-  let song_data = artist + '-' + song
-  let url_data = song_data.replace('&', 'and')
-  url_data = url_data.replace(nlt,'')
-
+}
+)
+let new_url = ""
+  for (let index = 0; index < pyData.length; index++) {
+    new_url += pyData[index].replace("\n","");
+  }
+return new_url
 
 }
 
@@ -290,18 +257,18 @@ async function GetLyrics(song,artist){ //Connecting to the Lyrics API and gettin
   :param artist: Artist Name
   */
  
-  let str_path = customizer(song,artist)
+  let str_path = await customizer(song,artist)
   var url_dt = `https://genius.com/${str_path}-lyrics`;
 
   var options = 
   {
-    url : `${url_dt}`,
-
+    url : url_dt,
   }
   const req_lyrics = await new Promise(async resolve => {
-   request(options,async function (error, response, html) {
+   request(url_dt,async function (error, response, html) { 
       if(error){
         resolve("ERR")
+        return
       }
     if (!error && response.statusCode == 200) {
       var $ = cheerio.load(html);
@@ -321,12 +288,12 @@ async function GetLyrics(song,artist){ //Connecting to the Lyrics API and gettin
     }
   });
   })
-
   let lyrics = await req_lyrics
   if(!lyrics){
-    if(der_check() == "NO_WIFI"){
-      return "\nNo wifi, please connect to internet!"
-    }
+    //Working on it!
+    // if(der_check() == "NO_WIFI"){
+    //   return "\nNo wifi, please connect to internet!"
+    // }
   }
   return lyrics //If all is ok lyrics are returning
 
@@ -335,3 +302,9 @@ async function GetLyrics(song,artist){ //Connecting to the Lyrics API and gettin
 
 // Launching the iLyrics process
 Launch();
+
+module.exports = {
+  Launch,
+  actual_song,
+  checking_interval
+}

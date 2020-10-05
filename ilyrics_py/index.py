@@ -1,5 +1,5 @@
 # This file is only for launch the application
-# All operations are makeing in index.py & ./modules
+# All operations are makeing in main.py & ./modules
 from sys import argv
 import main
 

@@ -1,5 +1,3 @@
- 
-
 set theStateM to ""
 set theStateS to ""
 set theStateQ to ""

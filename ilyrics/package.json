@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
+    "ilyrics":"node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Mondonno && github.com/Mondonno",
@@ -12,6 +13,7 @@
   "dependencies": {
     "applescript": "^1.0.0",
     "cheerio": "^1.0.0-rc.3",
+    "child_process": "^1.0.2",
     "file-metadata": "^1.0.0",
     "request": "^2.88.2"
   }

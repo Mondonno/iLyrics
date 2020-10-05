@@ -1,5 +1,5 @@
 # <img src="./resources/apple.png" width="25" ></img>         iLyrics
-**Hi! Welcome to music world!**
+**Hi! Welcome to music world!**<br>
 You maybe think "How to get music lyrics from `iTunes/Spotify/QuickTime Player` ?". You can do it with iLyrics! Run our app and get lirycs from currently playing song!<br>
 The simple app can make your life better!
 
@@ -7,7 +7,6 @@ The simple app can make your life better!
 
 #### **`Installation`**
 
-**NPM & NODE**<br>
 Note: You must install node and npm on your PC/Laptop
 - Download the `DOWNLOAD.zip` from lastest relase
 - Unpack the `.zip` on your computer
@@ -16,21 +15,13 @@ Note: You must install node and npm on your PC/Laptop
 - And now type `npm start` then the installation and configuration process is starting
 - After the installation and configuration type `npm start` and be happy!
 
-**PYTHON (Working on it)**<br>
-Note: You must install python on your PC/Laptop (MacOS has python built-in)
-- Download the `DOWNLOAD_PY.zip` from lastest relase
-- Unpack the `.zip` on your computer
-- Go to the folder in terminal
-- Type `python ilyric.py` then the installation and configuration process is starting
-- After the installation and configuration type `python index.py` and be happy!
-
 #### **`How to use?`**
 
 Run your loved music and look into terminal! In 2/3 secounds the terminal show you the current playing music, and lirycs for them!<br>
 When you run app ask you for permissions in: Apple Music(iTunes), Spotify, QuickTime Player<br>
 **For exit click** `Ctrl` + `C`
 
-#### **`System Requiments`**
+#### **`Minimum System Requiments`**
 - MacOS **9.0**
 - **100/200** mb free disk space
 - Connection to **internet** (Our app using API to get lyrics)
