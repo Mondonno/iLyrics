@@ -5,15 +5,22 @@ The simple app can make your life better!
 
 # Usage & Installation
 
-#### **`Installation`**
+#### **`Installation from source`**
 
-Note: You must install node and npm on your PC/Laptop
-- Download the `DOWNLOAD.zip` from lastest relase
+Note: You must install node, npm and python 3 on your PC/Laptop
+- Download the `SOURCE.zip` from lastest relase
 - Unpack the `.zip` on your computer
 - Go to the folder in terminal
 - Type `npm i` to install required packages
-- And now type `npm start` then the installation and configuration process is starting
-- After the installation and configuration type `npm start` and be happy!
+- And now type `npm start` then the installation and configuration process is starting. Then be happy, and use app!
+
+#### **`Installation from binary file`**
+
+Note: You must install node, npm and python 3 on your PC/Laptop
+- Download the `ILYRICS.app` from lastest relase
+- Go to the app
+- Click and run it
+- WoW! That's it!
 
 #### **`How to use?`**
 
@@ -35,11 +42,11 @@ in [**Issues Tab**](https://github.com/Mondonno/iLyrics/Issues)
         **2.** Spotify<br>
         **3.** QuickTime Player
 
-# Changelog
+# Changelog/TODO
 - [x] ~~Add supporting QuickTime Player~~ (v1.0)
 - [ ] Add support for Windows
 - [ ] Web options
-- [ ] Python 2.7.16 rewrite
+- [ ] Python 3.7.3 rewrite
 
 # More...
 *Some inspiration from `SwagLyrics`*<br>
