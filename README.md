@@ -47,6 +47,10 @@ in [**Issues Tab**](https://github.com/Mondonno/iLyrics/Issues)
 - [ ] Add support for Windows
 - [ ] Web options
 - [ ] Python 3.7.3 rewrite
+- [ ] Add demo (in gif)
+- [x] ~~Request to Fetch rewrite~~
+
+
 
 # More...
 *Some inspiration from `SwagLyrics`*<br>
