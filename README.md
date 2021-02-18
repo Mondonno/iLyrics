@@ -41,6 +41,8 @@ in [**Issues Tab**](https://github.com/Mondonno/iLyrics/Issues)
         **1.** Apple Music (iTunes)<br>
         **2.** Spotify<br>
         **3.** QuickTime Player
+#### **`Some demo's`**
+*Sooon!*
 
 # Changelog/TODO
 - [x] ~~Add supporting QuickTime Player~~ (v1.0)
