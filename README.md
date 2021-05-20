@@ -1,4 +1,4 @@
-# <img src="./resources/apple.png" width="25" ></img> iLyrics
+# <img src="https://i.imgur.com/gZclfrV.png" width="25" ></img> iLyrics
 
 **Hi! Welcome to music world!**<br>
 You maybe think "How to get music lyrics from `iTunes/Spotify/QuickTime Player` ?". You can do it with iLyrics! Run our app and get lirycs from currently playing song!<br>
