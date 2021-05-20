@@ -1,2 +1,0 @@
-
-dir = "applescript_f"
