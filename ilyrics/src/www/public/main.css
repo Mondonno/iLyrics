@@ -1,0 +1,62 @@
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: black;
+    color: white;
+    word-wrap: break-word;
+}
+
+a {
+    text-decoration: none;
+    border-bottom: 3px white solid;
+    color: white;
+}
+
+.ilyricsTitle {
+    text-align: center;
+}
+
+.ilyricsTitle a:hover {
+    border-color: dodgerblue;
+    opacity: 0.8;
+}
+
+.ilyricsTitle a {
+    transition: all .2s ease;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 40px;
+}
+
+#error:hover {
+    border-bottom: 0px solid black;
+}
+
+#error {
+    font-weight: bolder;
+    color: red;
+    border-bottom: 2px solid red;
+    transition: all .2s ease;
+}
+
+#lyrics {
+    margin: 0;
+    position: static;
+    text-align: center;
+    width: 100%;
+}
+
+#music_logo {
+    white-space: nowrap;
+    display: inline;
+    position: absolute;
+    float: left;
+    height: 50px;
+    top: 0px;
+    margin: 0;
+    padding: 0;
+    margin-left: 20%;
+    margin-top: 25px;
+}

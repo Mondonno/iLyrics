@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf8" />
+    <meta charset="author" content="github.com/Mondonno" />
+    <meta
+      content="width=device-width, initial-scale=1.0, maximum-scale=1, user-scalable=no"
+      name="viewport"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/apple.png" />
+
+    <script>
+      let refreshTime = <%= refreshTime %>
+    </script>
+    <script src="./musicChecker.js"></script>
+
+    <title><%= song.name %> | iLyrics</title>
+  </head>
+  <body>
+    <h1 class="ilyricsTitle">
+      <a href="<%- lyrics.url || '' %>" target="_blank"><%= song.name %></a>
+    </h1>
+    <br />
+    <center>
+      <p id="lyrics">
+        <% let errorMessage = `<span id="error">ERROR</span> can not download the lyrics (unavaible or you do not have internet connection)`; %>
+        <%-
+	   lyrics ? (lyrics.content ? lyrics.content.replace(/\n/g, '<br>') : errorMessage) : errorMessage;
+        %>
+      </p>
+      <br>
+      <br>
+    </center>
+  </body>
+</html>
+

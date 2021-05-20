@@ -1,20 +1,40 @@
 {
   "name": "ilyrics",
-  "version": "1.0.0",
-  "description": "Hi in music world! The iLyrics help to get more powerful lyrics! Run music and get lyrics NOW! More tutorials on github.com/Mondonno/iLyrics",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "iLyrics application to check the currently playing music and displaying lyrics for them",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node index.js",
-    "ilyrics":"node index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test",
+    "run": "node .",
+    "www": "node src/www/index.js",
+    "web": "npm run www"
   },
-  "author": "Mondonno && github.com/Mondonno",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mondonno/iLyrics.git"
+  },
+  "keywords": [
+    "ilyrics",
+    "the",
+    "best",
+    "lyrics",
+    "checker",
+    "macos",
+    "mac",
+    "os",
+    "thing"
+  ],
+  "author": "Mondonno",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Mondonno/iLyrics/issues"
+  },
+  "homepage": "https://github.com/Mondonno/iLyrics#readme",
   "dependencies": {
-    "applescript": "^1.0.0",
-    "cheerio": "^1.0.0-rc.3",
-    "child_process": "^1.0.2",
-    "file-metadata": "^1.0.0",
-    "request": "^2.88.2"
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "ilyrics-core": "^1.0"
   }
 }
