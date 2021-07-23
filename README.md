@@ -1,4 +1,4 @@
-<img src="https://i.imgur.com/jw1jRC6.png" height="149" width="149">
+<img src="https://i.imgur.com/jw1jRC6.png" height="149" width="447">
 
 # iLyrics
 Downloads lyrics for currently playing song on your computer from Spotify, iTunes, QuickTime Player.
