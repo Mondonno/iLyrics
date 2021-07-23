@@ -1,4 +1,4 @@
-const { iLyricsLib, IAppleScript } = require('../../../../ilyrics-core/core/src/');
+const { iLyricsLib, IAppleScript } = require('ilyrics-core');
 const { unsupportedPath, unsupportedRawPath } = require("./Configuration");
 const fileServe = require("fs");
 
