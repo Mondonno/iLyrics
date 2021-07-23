@@ -1,67 +1,37 @@
-# <img src="https://i.imgur.com/gZclfrV.png" width="25" ></img> iLyrics
+<img src="https://i.imgur.com/jw1jRC6.png" height="149" width="149">
 
-**Hi! Welcome to music world!**<br>
-You maybe think "How to get music lyrics from `iTunes/Spotify/QuickTime Player` ?". You can do it with iLyrics! Run our app and get lirycs from currently playing song!<br>
-The simple app can make your life better!
+# iLyrics
+Downloads lyrics for currently playing song on your computer from Spotify, iTunes, QuickTime Player.
+on MacOS, Windows (soon) and Linux (soon). Can be used in the command-line, browser, or in normal app.
+It is blazingly fast and powerfull, that gaurantees the best user exprience. It refreshes after the song changes in the player, so lyrics are 100% accurate.
+Lyrics are downloaded/fetched from Genius.
 
-# Usage & Installation
+This project using the `ilyrics-core` from another repository, that can be used by other developers, to use it in their own apps.
+I love creating this project and i'm thinking that everyone love to use it too.
 
-#### **`Installation from source`**
+## Why iLyrics is diffrent?
+iLyrics is X-Platform, fast and refreshes really quickly (measured).
+It first supports this bunch of players, and first app like this is avaible on all platforms (soon).
 
-Note: You must install node, npm and python 3 on your PC/Laptop
+This app was developed by me for personal usage, beacause any of the lyrics downloaded does not seems to work on iTunes or it need an API token.
+iLyrics does not requires any user interaction, or configuration. It does all on it side.
+User don't need to generate ANY api token for spotify or genius servieces. Our app detecting all players offline, and then fetches lyrics, if it is possible.
 
-- Download the `SOURCE.zip` from lastest relase
-- Unpack the `.zip` on your computer
-- Go to the folder in terminal
-- Type `npm i` to install required packages
-- And now type `npm start` then the installation and configuration process is starting. Then be happy, and use app!
+It perfectly integrates iTunes, if you play the song, and it's lyrics are not avaible on iTunes, it changes in-player lyrics to the downloaded.
+Singing offline is possible!
 
-#### **`Installation from binary file`**
+## How to?
+To install ilyrics you need latest `npm` and `node`. 
 
-Note: You must install node, npm and python 3 on your PC/Laptop
+After installing `node` and `npm` clone our repository, go into ilyrics and then you're able to run it.
 
-- Download the `ILYRICS.app` from lastest relase
-- Go to the app
-- Click and run it
-- WoW! That's it!
+To run it in web mode, so it is accesible from the browser you need to type `node . -t` or `node . -tab`
 
-#### **`How to use?`**
+To run ilyrics in console-line mode write into console just `node .` and that will run console-in version.
 
-Run your loved music and look into terminal! In 2/3 secounds the terminal show you the current playing music, and lirycs for them!<br>
-When you run app ask you for permissions in: Apple Music(iTunes), Spotify, QuickTime Player<br>
-**For exit click** `Ctrl` + `C`
+Website, getting refreshed after the song changes, so you don't need to refresh site.
 
-#### **`Minimum System Requiments`**
-
-- MacOS **9.0**
-- **100/200** mb free disk space
-- Connection to **internet** (Our app using API to get lyrics)
-
-#### **`Additional Info`**
-
-- We working on this app to be better. If you catch some errors let's report it
-  in [**Issues Tab**](https://github.com/Mondonno/iLyrics/issues)
-- The PR's and Comments are welcome!
-- The queue:<br>
-  **1.** Apple Music (iTunes)<br>
-  **2.** Spotify<br>
-  **3.** QuickTime Player
-
-#### **`Some demo's`**
-
-_Sooon!_
-
-# Changelog/TODO
-
-- [x] ~~Add supporting QuickTime Player~~ (v1.0)
-- [ ] Add support for Windows
-- [ ] Web options
-- [ ] Python 3.7.3 rewrite
-- [ ] Add demo (in gif)
-- [x] ~~Request to Fetch rewrite~~
-
-# More...
-
-_Some inspiration from `SwagLyrics`_<br>
-_On Apache license, to be better!_<br>
-_Donate us and the project!_<br>
+## Improvment To-do
+- Add `Windows` and `Linux` to supported systems.
+- Create tiny Electron app, wich will be accesible on the desktop.
+- Documentate `Ilyrics` and `ilyrics-core`

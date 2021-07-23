@@ -4,7 +4,8 @@ dist/unsupported.json
 # Note it is a GITHUB PROJECT gitignore
 .DS_Store
 ilyrics_py
-
+ilyrics/test/
+ilyrics/todo
 ilyrics/node_modules/
 
 # Stores VSCode versions used for testing VSCode extensions
