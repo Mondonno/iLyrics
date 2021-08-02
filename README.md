@@ -25,7 +25,7 @@ To install ilyrics you need latest `npm` and `node`.
 
 After installing `node` and `npm` clone our repository, go into ilyrics and then you're able to run it.
 
-To run it in web mode, so it is accesible from the browser you need to type `node . -t` or `node . -tab`
+To run it in web mode, so it is accesible from the browser you need to type `node . -t` or `node . --tab`
 
 To run ilyrics in console-line mode write into console just `node .` and that will run console-in version.
 
