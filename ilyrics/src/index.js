@@ -7,9 +7,9 @@ let lastArgv = process.argv[process.argv.length - 1];
 let cliFlags = lastArgv ? (lastArgv.startsWith('-') ? lastArgv.replace('-', '') : lastArgv) : lastArgv;
 
 if (cliFlags && (cliFlags === 't' || cliFlags === '-tab')) {
-    console.log(chalk`{bold.grey --->} Support us on {grey ->} {bold.underline.white github.com/Mondonno/iLyrics}`);
-    console.log(chalk`{bold.grey --->} iLyrics running on {bold.underline.white http://127.0.0.1:${websiteLocalPort}/}`);
-    console.log(chalk`{bold.grey ->} Click {bold.grey ^C} to {red exit}\n`);
+    console.log(chalk`{bold.grey --->} Support us on {grey ->} {bold.white github.com/Mondonno/iLyrics}`);
+    console.log(chalk`{bold.grey --->} iLyrics running on {bold.blue.underline http://127.0.0.1:${websiteLocalPort}/}`);
+    console.log(chalk`{bold.grey -->} Click {bold.grey ^C} to {bold.red exit}\n`);
 
     try {
         (require("./www"));
