@@ -6,7 +6,7 @@ on MacOS, Windows (soon) and Linux (soon). Can be used in the command-line, brow
 It is blazingly fast and powerfull, that gaurantees the best user exprience. It refreshes after the song changes in the player, so lyrics are 100% accurate.
 Lyrics are downloaded/fetched from Genius.
 
-This project using the `ilyrics-core` from another repository, that can be used by other developers, to use it in their own apps.
+This project using the [`ilyrics-core`](https://github.com/Mondonno/ilyrics-core) from another repository, that can be used by other developers, to use it in their own apps.
 I love creating this project and i'm thinking that everyone love to use it too.
 
 ## Why iLyrics is diffrent?
