@@ -23,16 +23,12 @@ const makeLog = (text, dontIndent = true, clear = false) => {
 class iLyrics {
     constructor(run = true, timeout = 5000) {
         this.timeout = timeout;
-        this.helper = new iLyricsHelper(this);
+        this.helper = new iLyricsHelper(this, this.timeout);
 
         if (run) this.run();
     }
 
-    setInterval(callback, timeout, args) {
-        return setInterval(callback, timeout, args);
-    }
-
-    async run(...args) {
+    async run() {
         makeLog(chalk`
         _ _                _          
        (_) |              (_)         
@@ -49,18 +45,27 @@ class iLyrics {
         ⎜ AUTHOR - github.com/Mondonno
         ⎣———————————————————————————————————————————————————————> }
        `, false, true);
-        this.setInterval(this.helper.checkMusicInterval.bind(this.helper), this.timeout);
+
+        this.helper.checkMusicInterval();
     }
 }
 
 class iLyricsHelper {
-    constructor(ilyrics) {
+    constructor(ilyrics, timeout) {
         isiLyricsForce(ilyrics);
 
         this.checker = new iLyricsLib(ilyrics);
+        this.checkerTimeout = timeout;
+
         this.lastPaused = false;
     }
+
     async checkMusicInterval() {
+        await this.checkMusic();
+        setTimeout(this.checkMusicInterval.bind(this), this.checkerTimeout);
+    }
+
+    async checkMusic() {
         let musicData;
         try {
             musicData = await this.checker.checkMusic();
@@ -68,7 +73,8 @@ class iLyricsHelper {
             let { name } = error;
 
             if (name === 'MusicGetReapeted') return;
-            else if (name === 'NoEnoughAttributes') return makeLog("Can not the required attributes", false, true);
+            else if (name === 'NoEnoughAttributes')
+                return makeLog("Can not get the required attributes", false, true);
         }
 
         if (!musicData) {
@@ -81,7 +87,6 @@ class iLyricsHelper {
         }
 
         let { name, author, player } = musicData.details;
-
         player = player.name;
 
         let constructedMusicData = {
