@@ -35,3 +35,4 @@ Website, getting refreshed after the song changes, so you don't need to refresh 
 - Add `Windows` and `Linux` to supported systems.
 - Create tiny Electron app, wich will be accesible on the desktop.
 - Documentate `Ilyrics` and `ilyrics-core`
+- Create websocket communication bettween server and website instead of loop
