@@ -7,6 +7,7 @@ ilyrics_py
 ilyrics/test/
 ilyrics/todo
 ilyrics/node_modules/
+ilyrics/package-lock.json
 
 # Stores VSCode versions used for testing VSCode extensions
 .vscode-test

@@ -32,9 +32,9 @@
   "homepage": "https://github.com/Mondonno/iLyrics#readme",
   "dependencies": {
     "chalk": "^4.1.0",
-    "cheerio": "^1.0.0-rc.10",
     "ejs": "^3.1.5",
     "express": "^4.17.1",
-    "ilyrics-core": "^1.0.0"
+    "ilyrics-core": "^1.0.0",
+    "ws": "^8.2.0"
   }
 }
