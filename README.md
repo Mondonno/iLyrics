@@ -1,5 +1,3 @@
-<img src="https://i.imgur.com/CaR5NMg.png" height="149" width="447">
-
 # iLyrics
 Downloads lyrics for currently playing song on your computer from Spotify, iTunes, QuickTime Player.
 on MacOS, Windows (soon) and Linux (soon). Can be used in the command-line, browser, or in normal app.
