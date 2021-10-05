@@ -1,3 +1,5 @@
+![iLyrics presentation baner](https://i.imgur.com/eNGMh1M.png)
+
 # iLyrics
 Downloads lyrics for currently playing song on your computer from Spotify, iTunes, QuickTime Player.
 on MacOS.
